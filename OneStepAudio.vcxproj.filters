@@ -7,9 +7,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sink.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -24,6 +21,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Sink.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConstantNode.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

@@ -5,8 +5,16 @@
 class Sink : public Node
 {
 public:
+	void SetSource(Node& source)
+	{
+		source_ = &source;
+	}
+
 	double Pull()
 	{
-		return 1.0;
+		return source_->Pull();
 	}
+
+private:
+	Node* source_;
 };

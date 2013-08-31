@@ -2,10 +2,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-#if 0
-	constant_ = new ConstantNode(1.0);
-	sink_ << constant_;
-#endif
+	sink_.SetSource(constant_);
 }
 
 //--------------------------------------------------------------

@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Sink.h"
+#include "ConstantNode.h"
 
 class testApp : public ofBaseApp{
 
@@ -24,4 +25,5 @@ class testApp : public ofBaseApp{
 	
 private:
 	Sink sink_;
+	ConstantNode constant_;
 };
