@@ -9,6 +9,8 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
 
+		void plot(const std::vector<double>& data);
+
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );

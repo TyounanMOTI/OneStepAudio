@@ -2,7 +2,11 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-
+#if 0
+	sink_ = new SinkNode();
+	constant_ = new ConstantNode(1.0);
+	sink_ << constant_;
+#endif
 }
 
 //--------------------------------------------------------------
@@ -12,7 +16,20 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
+	plot(std::vector<double>(256, 5.0));
+}
 
+void testApp::plot(const std::vector<double>& data)
+{
+	static float radius = 2.0f;
+
+	float x = 0.0f;
+	float max = *std::max_element(data.begin(), data.end());
+
+	for (double y : data) {
+		ofCircle(x, -y / max * ofGetHeight() / 2 + (ofGetHeight() / 2), radius);
+		x += ofGetWidth() / data.size();
+	}
 }
 
 //--------------------------------------------------------------
