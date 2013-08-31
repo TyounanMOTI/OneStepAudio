@@ -17,7 +17,9 @@ void testApp::update(){
 void testApp::draw(){
 	static const size_t bufferSize = 256;
 	auto result = std::vector<double>(bufferSize, 0.0);
-	sink_.Pull(result.data(), result.size());
+	std::transform (result.begin(), result.end(), result.begin(), [this](double x) {
+		return sink_.Pull();
+	});
 	plot(result);
 }
 

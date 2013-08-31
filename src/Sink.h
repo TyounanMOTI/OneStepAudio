@@ -1,16 +1,12 @@
 #pragma once
 
-class Sink
+#include "Node.h"
+
+class Sink : public Node
 {
 public:
-	Sink() {}
-	~Sink() {}
-
-	template<typename T>
-	void Pull(T* destBuffer, size_t bufferSize)
+	double Pull()
 	{
-		for (size_t i = 0; i < bufferSize; i++) {
-			*(destBuffer + i) = T(1.0);
-		}
+		return 1.0;
 	}
 };
