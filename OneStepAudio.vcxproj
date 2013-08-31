@@ -90,17 +90,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConstantNode.cpp" />
-    <ClCompile Include="Sink.cpp" />
-    <ClCompile Include="SinNode.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Sink.cpp" />
     <ClCompile Include="src\testApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConstantNode.h" />
-    <ClInclude Include="Node.h" />
-    <ClInclude Include="Sink.h" />
-    <ClInclude Include="SinNode.h" />
+    <ClInclude Include="src\Node.h" />
+    <ClInclude Include="src\Sink.h" />
     <ClInclude Include="src\testApp.h" />
   </ItemGroup>
   <ItemGroup>

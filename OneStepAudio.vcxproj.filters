@@ -7,13 +7,7 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="SinNode.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="Sink.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="ConstantNode.cpp">
+    <ClCompile Include="src\Sink.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,16 +20,10 @@
     <ClInclude Include="src\testApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="SinNode.h">
+    <ClInclude Include="src\Node.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="Sink.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="ConstantNode.h">
+    <ClInclude Include="src\Sink.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

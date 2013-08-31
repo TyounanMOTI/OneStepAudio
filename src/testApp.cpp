@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 #if 0
-	sink_ = new SinkNode();
 	constant_ = new ConstantNode(1.0);
 	sink_ << constant_;
 #endif
@@ -16,7 +15,10 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	plot(std::vector<double>(256, -1.0));
+	static const size_t bufferSize = 256;
+	auto result = std::vector<double>(bufferSize, 0.0);
+	sink_.Pull(result.data(), result.size());
+	plot(result);
 }
 
 // データの最大値が1.0と仮定して描画
