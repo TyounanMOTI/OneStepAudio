@@ -16,18 +16,18 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	plot(std::vector<double>(256, 5.0));
+	plot(std::vector<double>(256, -1.0));
 }
 
+// データの最大値が1.0と仮定して描画
 void testApp::plot(const std::vector<double>& data)
 {
 	static float radius = 2.0f;
 
 	float x = 0.0f;
-	float max = *std::max_element(data.begin(), data.end());
 
 	for (double y : data) {
-		ofCircle(x, -y / max * ofGetHeight() / 2 + (ofGetHeight() / 2), radius);
+		ofCircle(x, -y * ofGetHeight() / 2 + (ofGetHeight() / 2), radius);
 		x += ofGetWidth() / data.size();
 	}
 }
