@@ -5,9 +5,9 @@
 class Sink : public Node
 {
 public:
-	void SetSource(Node& source)
+	void SetSource(Node* source)
 	{
-		source_ = &source;
+		source_ = source;
 	}
 
 	double Pull()
