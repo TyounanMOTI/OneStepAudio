@@ -2,7 +2,7 @@
 
 #include "Node.h"
 
-class ConstantNode : public Node
+class Constant : public Node
 {
 public:
 	double Pull()

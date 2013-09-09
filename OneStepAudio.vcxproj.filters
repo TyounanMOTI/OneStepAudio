@@ -23,7 +23,7 @@
     <ClInclude Include="src\Sink.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\ConstantNode.h">
+    <ClInclude Include="src\Constant.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

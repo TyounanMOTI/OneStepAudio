@@ -94,7 +94,7 @@
     <ClCompile Include="src\testApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ConstantNode.h" />
+    <ClInclude Include="src\Constant.h" />
     <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\Sink.h" />
     <ClInclude Include="src\testApp.h" />
