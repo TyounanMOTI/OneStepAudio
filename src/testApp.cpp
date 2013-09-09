@@ -1,5 +1,9 @@
 #include "testApp.h"
 
+testApp::testApp() : constant_(1.0), ofBaseApp()
+{
+}
+
 //--------------------------------------------------------------
 void testApp::setup(){
 	sink_.SetSource(&constant_);
