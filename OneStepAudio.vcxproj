@@ -96,6 +96,7 @@
   <ItemGroup>
     <ClInclude Include="src\Constant.h" />
     <ClInclude Include="src\Node.h" />
+    <ClInclude Include="src\Phase.h" />
     <ClInclude Include="src\Sink.h" />
     <ClInclude Include="src\testApp.h" />
   </ItemGroup>

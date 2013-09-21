@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "Sink.h"
 #include "Constant.h"
+#include "Phase.h"
 
 class testApp : public ofBaseApp{
 
@@ -27,4 +28,5 @@ class testApp : public ofBaseApp{
 private:
 	Sink sink_;
 	Constant constant_;
+	Phase phase_;
 };
