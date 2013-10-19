@@ -4,6 +4,8 @@
 #include "Sink.h"
 #include "Constant.h"
 #include "Phase.h"
+#include "Buffer.h"
+#include <memory>
 
 class testApp : public ofBaseApp{
 
@@ -29,4 +31,5 @@ private:
 	Sink sink_;
 	Constant constant_;
 	Phase phase_;
+	std::unique_ptr<Buffer> music_;
 };

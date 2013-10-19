@@ -1,4 +1,6 @@
 #include "testApp.h"
+#include "WAVLoader.h"
+#include "Buffer.h"
 
 testApp::testApp() : constant_(1.0), ofBaseApp()
 {
@@ -7,6 +9,10 @@ testApp::testApp() : constant_(1.0), ofBaseApp()
 //--------------------------------------------------------------
 void testApp::setup(){
 	sink_.SetSource(&constant_);
+
+	std::string musicFilePath = ofDirectory("130915.wav").getAbsolutePath();
+	WAVLoader loader(musicFilePath);
+	music_.reset(new Buffer(loader.Read()));
 }
 
 //--------------------------------------------------------------
@@ -16,11 +22,11 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	static const size_t bufferSize = 256;
+	static const size_t bufferSize = 1024;
 	auto result = std::vector<double>(bufferSize, 0.0);
 	std::generate (result.begin(), result.end(), [this]()
 	{
-		return sink_.Pull();
+		return music_->Pull();
 	});
 	plot(result);
 }
