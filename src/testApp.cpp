@@ -25,7 +25,7 @@ void testApp::draw(){
 	plot(result);
 }
 
-// ƒf[ƒ^‚ÌÅ‘å’l‚ª1.0‚Æ‰¼’è‚µ‚Ä•`‰æ
+// ãƒ‡ãƒ¼ã‚¿ã®æœ€å¤§å€¤ãŒ1.0ã¨ä»®å®šã—ã¦æç”»
 void testApp::plot(const std::vector<double>& data)
 {
 	static float radius = 2.0f;
