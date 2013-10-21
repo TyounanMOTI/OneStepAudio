@@ -68,3 +68,9 @@ Acknowledgements
 	
 	OneStepAudio will load libsndfile dynamic link library.
 
+- RtAudio
+
+  RtAudio WWW site: http://www.music.mcgill.ca/~gary/rtaudio/
+  RtAudio: realtime audio i/o C++ classes
+  Copyright (c) 2001-2013 Gary P. Scavone
+

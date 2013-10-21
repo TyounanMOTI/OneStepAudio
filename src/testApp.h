@@ -15,6 +15,7 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
 
+		void audioOut( float * output, int bufferSize, int nChannels);
 		void plot(const std::vector<double>& data);
 
 		void keyPressed(int key);

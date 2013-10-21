@@ -11,7 +11,7 @@ public:
 	explicit WAVLoader(const std::string& filePath);
 
 	// WAVファイルの内容を全て格納したバッファを返す
-	Buffer Read();
+	std::unique_ptr<Buffer> Read();
 
 private:
 	std::string filePath_;

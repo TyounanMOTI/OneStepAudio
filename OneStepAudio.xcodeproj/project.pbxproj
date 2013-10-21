@@ -11,6 +11,7 @@
 		9DEB63051812E6C900B6475F /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB63021812E6C900B6475F /* testApp.cpp */; };
 		9DEB630B1812FC8D00B6475F /* WAVLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB63091812FC8D00B6475F /* WAVLoader.cpp */; };
 		9DEB630E1813018D00B6475F /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB630C1813018D00B6475F /* Buffer.cpp */; };
+		9DEB631418156D9000B6475F /* RtAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB631118156D9000B6475F /* RtAudio.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -76,6 +77,9 @@
 		9DEB630C1813018D00B6475F /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
 		9DEB630D1813018D00B6475F /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
 		9DEB630F18130E0200B6475F /* User.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = User.xcconfig; sourceTree = "<group>"; };
+		9DEB631118156D9000B6475F /* RtAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RtAudio.cpp; path = lib/rtAudio/RtAudio.cpp; sourceTree = "<group>"; };
+		9DEB631218156D9000B6475F /* RtAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RtAudio.h; path = lib/rtAudio/RtAudio.h; sourceTree = "<group>"; };
+		9DEB631318156D9000B6475F /* RtError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RtError.h; path = lib/rtAudio/RtError.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -127,6 +131,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DEB631018156D3900B6475F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9DEB631118156D9000B6475F /* RtAudio.cpp */,
+				9DEB631218156D9000B6475F /* RtAudio.h */,
+				9DEB631318156D9000B6475F /* RtError.h */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +203,7 @@
 				9DEB63061812EFF900B6475F /* README.md */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				9DEB631018156D3900B6475F /* lib */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
@@ -315,6 +330,7 @@
 				9DEB630E1813018D00B6475F /* Buffer.cpp in Sources */,
 				9DEB630B1812FC8D00B6475F /* WAVLoader.cpp in Sources */,
 				9DEB63051812E6C900B6475F /* testApp.cpp in Sources */,
+				9DEB631418156D9000B6475F /* RtAudio.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
