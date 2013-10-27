@@ -32,5 +32,5 @@ private:
 	Sink sink_;
 	Constant constant_;
 	Phase phase_;
-	std::unique_ptr<Buffer> music_;
+	Buffer music_;
 };

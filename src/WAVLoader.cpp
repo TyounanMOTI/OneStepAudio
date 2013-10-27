@@ -8,13 +8,13 @@ WAVLoader::WAVLoader(const std::string& filePath)
 {
 }
 
-std::unique_ptr<Buffer> WAVLoader::Read()
+Buffer WAVLoader::Read()
 {
 	SndfileHandle fileHandle(filePath_);
 
 	if (fileHandle.error()) {
 		std::cout << "[WAVLoader] File not found: " + filePath_ << std::endl;
-		return std::unique_ptr<Buffer>(new Buffer(std::vector<double>(0)));
+		return Buffer();
 	}
 
 	// SndfileHandle::frames関数は（サンプリングレート*秒数）を返す。
@@ -22,5 +22,5 @@ std::unique_ptr<Buffer> WAVLoader::Read()
 	std::vector<double> output(fileHandle.frames() * fileHandle.channels());
 	fileHandle.readf(output.data(), fileHandle.frames());
 
-	return std::unique_ptr<Buffer>(new Buffer(output));
+	return Buffer(output);
 }

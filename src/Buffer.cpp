@@ -1,18 +1,24 @@
 #include "Buffer.h"
+#include <assert.h>
 
-Buffer::Buffer(std::vector<double> content)
+
+Buffer::Buffer()
+	: content_(),
+		head_index_(0)
+{
+}
+
+Buffer::Buffer(const std::vector<double>& content)
 	: content_(content),
-		head_(content_.begin())
+		head_index_(0)
 {
 }
 
 double Buffer::Pull()
 {
-	if (head_ == content_.end()) {
+	if (head_index_ == content_.size()) {
 		return 0.0;
 	} else {
-		auto retval = *head_;
-		++head_;
-		return retval;
+		return content_[++head_index_];
 	}
 }

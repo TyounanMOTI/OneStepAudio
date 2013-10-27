@@ -27,7 +27,7 @@ void testApp::audioOut( float * output, int bufferSize, int nChannels )
 	std::generate_n(output, bufferSize * nChannels,
 								[this]()
 								{
-									return music_->Pull();
+									return music_.Pull();
 								});
 }
 
