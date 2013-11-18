@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 class Buffer;
 
@@ -12,6 +13,7 @@ public:
 
 	// WAVファイルの内容を全て格納したバッファを返す
 	Buffer Read();
+	void Read(std::vector<float>& output);
 
 private:
 	std::string filePath_;

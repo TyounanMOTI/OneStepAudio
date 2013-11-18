@@ -24,3 +24,18 @@ Buffer WAVLoader::Read()
 
 	return Buffer(output);
 }
+
+void WAVLoader::Read(std::vector<float> &output)
+{
+	SndfileHandle fileHandle(filePath_);
+
+	if (fileHandle.error()) {
+		std::cout << "[WAVLoader] File not found: " + filePath_ << std::endl;
+		return Buffer();
+	}
+
+	// SndfileHandle::frames関数は（サンプリングレート*秒数）を返す。
+	// SndfileHandle::readf関数で実際に読み込まれるのは（フレーム数*チャンネル数）なので、確保するのは（フレーム数*チャンネル数）ぶんの領域。
+	output.resize(fileHandle.frames() * fileHandle.channels());
+	fileHandle.readf(output.data(), fileHandle.frames());
+}

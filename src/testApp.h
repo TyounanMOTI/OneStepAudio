@@ -29,8 +29,4 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	
 private:
-	Sink sink_;
-	Constant constant_;
-	Phase phase_;
-	Buffer music_;
 };

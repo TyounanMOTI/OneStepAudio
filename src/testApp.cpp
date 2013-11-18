@@ -2,17 +2,16 @@
 #include "WAVLoader.h"
 #include "Buffer.h"
 
-testApp::testApp() : constant_(1.0), ofBaseApp()
+testApp::testApp() : ofBaseApp()
 {
 }
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	sink_.SetSource(&constant_);
-
 	std::string musicFilePath = ofDirectory("130915.wav").getAbsolutePath();
 	WAVLoader loader(musicFilePath);
-	music_ = loader.Read();
+	std::vector<float> source;
+	loader.Read(source);
 
 	ofSoundStreamSetup(2, 0, this);
 }
@@ -24,11 +23,6 @@ void testApp::update(){
 
 void testApp::audioOut( float * output, int bufferSize, int nChannels )
 {
-	std::generate_n(output, bufferSize * nChannels,
-								[this]()
-								{
-									return music_.Pull();
-								});
 }
 
 //--------------------------------------------------------------
