@@ -25,13 +25,30 @@ OneStepAudio
 	以下のGitHubリポジトリをクローンしてください。
 	https://github.com/openFrameworks-cpp11/openFrameworks
 	
+- libsndfile 1.0.25
+	
+	homebrewなどでインストールしてください。
+	
 ### Windows
 - Visual Studio 2012
 - OpenFrameworks 0.8.0
+- libsndfile 1.0.25
+
+	Windowsでは（まだ）試していません。
 
 ## ビルド手順
-1.	openFrameworks/apps/myApps 以下に OneStepAudio フォルダを配置する。
-2.	お手持ちの開発環境でビルドする。
+### Mac
+1.	openFrameworks/apps/myApps 以下に OneStepAudio フォルダを配置する
+2. Xcode で OneStepAudio/OneStepAudio.xcodeproj を開く
+3. User.xcconfig を編集する
+	1. libsndfile の動的リンクライブラリ、ヘッダーファイルパスを編集する
+4. ビルドして実行する
+
+### Windows
+1.	openFrameworks/apps/myApps 以下に OneStepAudio フォルダを配置する
+2. Visual Studio 2012 で OneStepAudio/OneStepAudio.sln を開く
+3. libsndfile のライブラリ、ヘッダーファイルへのパスを通す（まだ試していません）
+4. ビルドして実行する
 
 License
 ============
@@ -43,3 +60,17 @@ Acknowledgements
 
 	Copyright (c) 2004- openFrameworks Community
 	http://www.openframeworks.cc
+	
+- libsndfile
+	
+	libsndfile was written by Erik de Castro Lopo, and released under LGPL version3.
+	http://www.mega-nerd.com/libsndfile/
+	
+	OneStepAudio will load libsndfile dynamic link library.
+
+- RtAudio
+
+  RtAudio WWW site: http://www.music.mcgill.ca/~gary/rtaudio/
+  RtAudio: realtime audio i/o C++ classes
+  Copyright (c) 2001-2013 Gary P. Scavone
+

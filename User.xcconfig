@@ -1,0 +1,6 @@
+// Please modify for your environment.
+
+// dependent libraries:
+// - libsndfile
+LIB_SNDFILE = /usr/local/lib/libsndfile.dylib
+HEADER_SNDFILE = /usr/local/include

@@ -4,6 +4,8 @@
 #include "Sink.h"
 #include "Constant.h"
 #include "Phase.h"
+#include "Buffer.h"
+#include <memory>
 
 class testApp : public ofBaseApp{
 
@@ -13,6 +15,7 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
 
+		void audioOut( float * output, int bufferSize, int nChannels);
 		void plot(const std::vector<double>& data);
 
 		void keyPressed(int key);
@@ -29,4 +32,5 @@ private:
 	Sink sink_;
 	Constant constant_;
 	Phase phase_;
+	Buffer music_;
 };
